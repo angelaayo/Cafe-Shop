@@ -1,7 +1,7 @@
 export default function CartPage(){
     return(
         <>
-        <h1>Welcome to the cart view</h1>
+        <h1>Cart view</h1>
         </>
     )
 }

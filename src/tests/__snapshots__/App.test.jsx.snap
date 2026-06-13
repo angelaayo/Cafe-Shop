@@ -1,29 +1,399 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App Component > Render Magnificent Monkeys 1`] = `
+exports[`App component renders > Render Nav Links 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <button
-        type="button"
-      >
-        Click Me
-      </button>
-      <h1>
-        Magnificent Monkeys
-      </h1>
+      <div>
+        <h1>
+          This is where we have the navigation
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                data-discover="true"
+                href="/"
+              >
+                Cafe Nautica
+              </a>
+            </li>
+            <li>
+              <a
+                data-discover="true"
+                href="/shop"
+              >
+                Shop Page
+              </a>
+            </li>
+            <li>
+              <a
+                data-discover="true"
+                href="/cart"
+              >
+                Cart Page
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          class="homePage"
+        >
+          <h1>
+            Homepage
+          </h1>
+          <div
+            class="bgImg1"
+            style="background-image: url("/src/assets/bgImage1.jpg");"
+          >
+            <div
+              class="textContent"
+            >
+              <h1>
+                Delicious Coffee
+              </h1>
+              <h5>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </h5>
+              <a
+                data-discover="true"
+                href="/shop"
+              >
+                Shop
+              </a>
+            </div>
+          </div>
+          <div
+            class="midHeader"
+          >
+            <h2>
+              Drink a coffee
+            </h2>
+            <h5>
+              Taste you've never imagined
+            </h5>
+          </div>
+          <div
+            class="popularContainer"
+          >
+            <div
+              class="cardContainer"
+              style="background-image: url("/src/assets/testImage.avif");"
+            >
+              <div
+                class="infoContainer"
+              >
+                <h4>
+                  Caramel Frap
+                </h4>
+                <h5>
+                  Brief Description
+                </h5>
+                <div
+                  class="purchaseInfo"
+                >
+                  <h5>
+                    $5 Price
+                  </h5>
+                  <div
+                    class="buttonContainer"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <span>
+                      0
+                    </span>
+                    <button>
+                      +
+                    </button>
+                    <button>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="cardContainer"
+              style="background-image: url("/src/assets/testImage2.avif");"
+            >
+              <div
+                class="infoContainer"
+              >
+                <h4>
+                  Caramel Frap
+                </h4>
+                <h5>
+                  Brief Description
+                </h5>
+                <div
+                  class="purchaseInfo"
+                >
+                  <h5>
+                    $5 Price
+                  </h5>
+                  <div
+                    class="buttonContainer"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <span>
+                      0
+                    </span>
+                    <button>
+                      +
+                    </button>
+                    <button>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="cardContainer"
+              style="background-image: url("/src/assets/testImage3.avif");"
+            >
+              <div
+                class="infoContainer"
+              >
+                <h4>
+                  Caramel Frap
+                </h4>
+                <h5>
+                  Brief Description
+                </h5>
+                <div
+                  class="purchaseInfo"
+                >
+                  <h5>
+                    $5 Price
+                  </h5>
+                  <div
+                    class="buttonContainer"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <span>
+                      0
+                    </span>
+                    <button>
+                      +
+                    </button>
+                    <button>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bgImg2"
+            style="background-image: url("/src/assets/bgImage2.jpg");"
+          />
+        </div>
+      </div>
     </div>
   </body>,
   "container": <div>
-    <button
-      type="button"
-    >
-      Click Me
-    </button>
-    <h1>
-      Magnificent Monkeys
-    </h1>
+    <div>
+      <h1>
+        This is where we have the navigation
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              data-discover="true"
+              href="/"
+            >
+              Cafe Nautica
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop Page
+            </a>
+          </li>
+          <li>
+            <a
+              data-discover="true"
+              href="/cart"
+            >
+              Cart Page
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="homePage"
+      >
+        <h1>
+          Homepage
+        </h1>
+        <div
+          class="bgImg1"
+          style="background-image: url("/src/assets/bgImage1.jpg");"
+        >
+          <div
+            class="textContent"
+          >
+            <h1>
+              Delicious Coffee
+            </h1>
+            <h5>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </h5>
+            <a
+              data-discover="true"
+              href="/shop"
+            >
+              Shop
+            </a>
+          </div>
+        </div>
+        <div
+          class="midHeader"
+        >
+          <h2>
+            Drink a coffee
+          </h2>
+          <h5>
+            Taste you've never imagined
+          </h5>
+        </div>
+        <div
+          class="popularContainer"
+        >
+          <div
+            class="cardContainer"
+            style="background-image: url("/src/assets/testImage.avif");"
+          >
+            <div
+              class="infoContainer"
+            >
+              <h4>
+                Caramel Frap
+              </h4>
+              <h5>
+                Brief Description
+              </h5>
+              <div
+                class="purchaseInfo"
+              >
+                <h5>
+                  $5 Price
+                </h5>
+                <div
+                  class="buttonContainer"
+                >
+                  <button>
+                    -
+                  </button>
+                  <span>
+                    0
+                  </span>
+                  <button>
+                    +
+                  </button>
+                  <button>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="cardContainer"
+            style="background-image: url("/src/assets/testImage2.avif");"
+          >
+            <div
+              class="infoContainer"
+            >
+              <h4>
+                Caramel Frap
+              </h4>
+              <h5>
+                Brief Description
+              </h5>
+              <div
+                class="purchaseInfo"
+              >
+                <h5>
+                  $5 Price
+                </h5>
+                <div
+                  class="buttonContainer"
+                >
+                  <button>
+                    -
+                  </button>
+                  <span>
+                    0
+                  </span>
+                  <button>
+                    +
+                  </button>
+                  <button>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="cardContainer"
+            style="background-image: url("/src/assets/testImage3.avif");"
+          >
+            <div
+              class="infoContainer"
+            >
+              <h4>
+                Caramel Frap
+              </h4>
+              <h5>
+                Brief Description
+              </h5>
+              <div
+                class="purchaseInfo"
+              >
+                <h5>
+                  $5 Price
+                </h5>
+                <div
+                  class="buttonContainer"
+                >
+                  <button>
+                    -
+                  </button>
+                  <span>
+                    0
+                  </span>
+                  <button>
+                    +
+                  </button>
+                  <button>
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bgImg2"
+          style="background-image: url("/src/assets/bgImage2.jpg");"
+        />
+      </div>
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

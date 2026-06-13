@@ -1,4 +1,51 @@
+.homePage{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .popularContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 70%;
+  place-self: center;
+}
+.bgImg1{
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  align-items: center;
+}
+
+.bgImg2{
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.textContent{
+  width: 45%;
+  padding: 3rem 1.5rem;
+  height: fit-content;
+}
+
+.midHeader{
+  text-align: center;
+}
+
+@media(max-width: 1520px){
+  .popularContainer{
+    width: 90%;
+  }
+}
+
+@media(max-width: 500px){
+  .bgImg1{
+    height: 200px;
+  }
 }

@@ -1,14 +1,13 @@
 .cardContainer {
   /* border: 1px solid green; */
-  width: 290px;
-  height: 300px;
+  height: 350px;
+  width: 22rem;
   background-size: cover;
   background-position: 50% 80%;
   border-radius: 1.5rem;
   display: flex;
   align-items: flex-end;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);
-;
 }
 
 .infoContainer {
@@ -18,10 +17,6 @@
   padding: 0.4rem 0.6rem;
 
 }
-h5{
-    font-weight: normal;
-}
-
 .purchaseInfo{
     /* border: 1px solid red; */
     display: flex;
@@ -37,4 +32,16 @@ h5{
     height: 1.5rem;
     padding: 0rem 0.5rem;
     align-items: center;
+}
+
+@media(max-width: 935px){
+  .cardContainer{
+    background-position: 50% 60%;
+  }
+}
+
+@media(max-width: 485px){
+  .cardContainer{
+    height: 200px;
+  }
 }
