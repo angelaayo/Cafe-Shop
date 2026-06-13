@@ -12,6 +12,11 @@
   width: 70%;
   place-self: center;
 }
+
+.popCard{
+  height: 350px;
+  width: 20rem;
+}
 .bgImg1{
   height: 400px;
   width: 100%;
@@ -42,6 +47,9 @@
   .popularContainer{
     width: 90%;
   }
+  .popCard{
+  width: 15rem;
+}
 }
 
 @media(max-width: 500px){

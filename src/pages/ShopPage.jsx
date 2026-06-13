@@ -1,25 +1,21 @@
 import { useState, useEffect } from "react";
+import Card from "../components/Card.jsx";
+import "../styles/ShopPage.css";
 
 export default function ShopPage() {
-  const [inventory, setInventory] = useState([]);
+  const [inventory, setInventory] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const hotResponse = await fetch(
-          "https://api.sampleapis.com/coffee/hot",
-        );
-        const icedResponse = await fetch(
-          "https://api.sampleapis.com/coffee/iced",
-        );
-        if (hotResponse.status >= 400 || icedResponse.status >= 400) {
+        const response = await fetch("https://api.sampleapis.com/coffee/hot");
+        if (response.status >= 400) {
           throw new Error("server error");
         }
-        const hotData = await hotResponse.json();
-        const icedData = await icedResponse.json();
-        setInventory([...hotData, ...icedData]);
+        const data = await response.json();
+        setInventory(data);
       } catch (error) {
         setError(error);
       } finally {
@@ -35,6 +31,21 @@ export default function ShopPage() {
   return (
     <>
       <h1>Catalog</h1>
+      <div className="shopContainer">
+        {inventory.map((menuItem, index) => (
+          <div className="cardContainer">
+            <Card
+              key={index}
+              title={menuItem.title}
+              description={menuItem.description
+                .split(" ")
+                .slice(0, 4)
+                .join(" ")}
+              image={menuItem.image}
+            />
+          </div>
+        ))}
+      </div>
     </>
   );
 }

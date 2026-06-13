@@ -11,10 +11,10 @@ export default function Card(props) {
         setCount(count-1);
     }
   return (
-    <div className="cardContainer" style={{backgroundImage: `url(${props.img})`}}>
+    <div className="image" style={{backgroundImage: `url(${props.image})`}}>
       <div className="infoContainer">
-        <h4>Caramel Frap</h4>
-        <h5>Brief Description</h5>
+        <h4>{props.title}</h4>
+        <h5>{props.description}</h5>
         <div className="purchaseInfo">
           <h5>$5 Price</h5>
           <div className="buttonContainer">

@@ -79,17 +79,13 @@ exports[`App component renders > Render Nav Links 1`] = `
           >
             <div
               class="cardContainer"
-              style="background-image: url("/src/assets/testImage.avif");"
+              style="background-image: url("undefined");"
             >
               <div
                 class="infoContainer"
               >
-                <h4>
-                  Caramel Frap
-                </h4>
-                <h5>
-                  Brief Description
-                </h5>
+                <h4 />
+                <h5 />
                 <div
                   class="purchaseInfo"
                 >
@@ -117,17 +113,13 @@ exports[`App component renders > Render Nav Links 1`] = `
             </div>
             <div
               class="cardContainer"
-              style="background-image: url("/src/assets/testImage2.avif");"
+              style="background-image: url("undefined");"
             >
               <div
                 class="infoContainer"
               >
-                <h4>
-                  Caramel Frap
-                </h4>
-                <h5>
-                  Brief Description
-                </h5>
+                <h4 />
+                <h5 />
                 <div
                   class="purchaseInfo"
                 >
@@ -155,17 +147,13 @@ exports[`App component renders > Render Nav Links 1`] = `
             </div>
             <div
               class="cardContainer"
-              style="background-image: url("/src/assets/testImage3.avif");"
+              style="background-image: url("undefined");"
             >
               <div
                 class="infoContainer"
               >
-                <h4>
-                  Caramel Frap
-                </h4>
-                <h5>
-                  Brief Description
-                </h5>
+                <h4 />
+                <h5 />
                 <div
                   class="purchaseInfo"
                 >
@@ -275,17 +263,13 @@ exports[`App component renders > Render Nav Links 1`] = `
         >
           <div
             class="cardContainer"
-            style="background-image: url("/src/assets/testImage.avif");"
+            style="background-image: url("undefined");"
           >
             <div
               class="infoContainer"
             >
-              <h4>
-                Caramel Frap
-              </h4>
-              <h5>
-                Brief Description
-              </h5>
+              <h4 />
+              <h5 />
               <div
                 class="purchaseInfo"
               >
@@ -313,17 +297,13 @@ exports[`App component renders > Render Nav Links 1`] = `
           </div>
           <div
             class="cardContainer"
-            style="background-image: url("/src/assets/testImage2.avif");"
+            style="background-image: url("undefined");"
           >
             <div
               class="infoContainer"
             >
-              <h4>
-                Caramel Frap
-              </h4>
-              <h5>
-                Brief Description
-              </h5>
+              <h4 />
+              <h5 />
               <div
                 class="purchaseInfo"
               >
@@ -351,17 +331,13 @@ exports[`App component renders > Render Nav Links 1`] = `
           </div>
           <div
             class="cardContainer"
-            style="background-image: url("/src/assets/testImage3.avif");"
+            style="background-image: url("undefined");"
           >
             <div
               class="infoContainer"
             >
-              <h4>
-                Caramel Frap
-              </h4>
-              <h5>
-                Brief Description
-              </h5>
+              <h4 />
+              <h5 />
               <div
                 class="purchaseInfo"
               >

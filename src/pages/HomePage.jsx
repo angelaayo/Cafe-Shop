@@ -33,9 +33,27 @@ const HomePage = () => {
         <h5>Taste you've never imagined</h5>
       </div>
       <div className="popularContainer">
-        <Card img={testImage} />
-        <Card img={testImage2} />
-        <Card img={testImage3} />
+        <div className="popCard">
+          <Card
+            image={testImage}
+            title={"Vanilla Latte"}
+            description={"Lorem Ipsum"}
+          />
+        </div>
+        <div className="popCard">
+          <Card
+            image={testImage2}
+            title={"Caramel Latte"}
+            description={"Lorem Ipsum"}
+          />
+        </div>
+        <div className="popCard">
+          <Card
+            image={testImage3}
+            title={"Cappuccino"}
+            description={"Lorem Ipsum"}
+          />
+        </div>
       </div>
       <div
         className="bgImg2"

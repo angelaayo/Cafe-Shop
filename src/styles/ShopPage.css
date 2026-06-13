@@ -1,0 +1,15 @@
+.shopContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.shopContainer .cardContainer{
+    width: 17rem;
+    height: 280px;
+}
