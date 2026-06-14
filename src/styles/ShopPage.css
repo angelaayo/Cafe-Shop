@@ -1,15 +1,27 @@
-.shopContainer{
-    /* border: 1px solid red; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    width: 70%;
-    margin: 0 auto;
+.shopContainer {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.shopContainer .cardContainer{
-    width: 17rem;
-    height: 280px;
+.cardContainer-shop {
+  width: 17rem;
+  height: 17.5rem;
+}
+
+@media (max-width: 1320px) {
+  .shopContainer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .cardContainer-shop {
+    border: 1px solid pink;
+    height: 16rem;
+  }
 }

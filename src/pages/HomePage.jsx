@@ -1,19 +1,13 @@
 import "../styles/HomePage.css";
 import Card from "../components/Card";
-import testImage from "../assets/testImage.avif";
-import testImage2 from "../assets/testImage2.avif";
-import testImage3 from "../assets/testImage3.avif";
 import bgImage1 from "../assets/bgImage1.jpg";
 import bgImage2 from "../assets/bgImage2.jpg";
 import { Link } from "react-router";
-// import { useState } from "react";
+import { useCart } from "../Context/CartContext";
 
 const HomePage = () => {
-  // const [heading, setHeading] = useState("Magnificent Monkeys");
-
-  // const clickHandler = () =>{
-  //   setHeading("Radical Rhinos");
-  // };
+  const { inventory, loading } = useCart();
+  const top3 = [inventory[0], inventory[1], inventory[2]];
 
   return (
     <div className="homePage">
@@ -33,27 +27,25 @@ const HomePage = () => {
         <h5>Taste you've never imagined</h5>
       </div>
       <div className="popularContainer">
-        <div className="popCard">
-          <Card
-            image={testImage}
-            title={"Vanilla Latte"}
-            description={"Lorem Ipsum"}
-          />
-        </div>
-        <div className="popCard">
-          <Card
-            image={testImage2}
-            title={"Caramel Latte"}
-            description={"Lorem Ipsum"}
-          />
-        </div>
-        <div className="popCard">
-          <Card
-            image={testImage3}
-            title={"Cappuccino"}
-            description={"Lorem Ipsum"}
-          />
-        </div>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <>
+            {top3.map((menuItem) => (
+              <div className="popCard" key={menuItem.id}>
+                <Card
+                  key={menuItem.id}
+                  image={menuItem.image}
+                  title={menuItem.title}
+                  description={menuItem.description
+                    .split(" ")
+                    .slice(0, 4)
+                    .join(" ")}
+                />
+              </div>
+            ))}
+          </>
+        )}
       </div>
       <div
         className="bgImg2"
