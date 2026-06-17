@@ -34,9 +34,7 @@ const HomePage = () => {
             {top3.map((menuItem) => (
               <div className="popCard" key={menuItem.id}>
                 <Card
-                  key={menuItem.id}
-                  image={menuItem.image}
-                  title={menuItem.title}
+                  menuItem={menuItem}
                   description={menuItem.description
                     .split(" ")
                     .slice(0, 4)

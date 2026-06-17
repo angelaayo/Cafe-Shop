@@ -15,12 +15,11 @@ export default function ShopPage() {
         {inventory.map((menuItem) => (
           <div className="cardContainer-shop" key={menuItem.id}>
             <Card
-              title={menuItem.title}
+              menuItem={menuItem}
               description={menuItem.description
                 .split(" ")
                 .slice(0, 4)
                 .join(" ")}
-              image={menuItem.image}
             />
           </div>
         ))}
