@@ -53,11 +53,15 @@ export const CartProvider = ({ children }) => {
           ),
         );
       } else {
-        setCart(cart.filter((cartItem) => cartItem.id != itemToRemove.id));
+        removeFromCart(itemToRemove);
       }
     } else {
       return;
     }
+  };
+
+  const removeFromCart = (itemToRemove) => {
+    setCart(cart.filter((cartItem) => cartItem.id != itemToRemove.id));
   };
 
   const totalCartCount = () => {
@@ -74,6 +78,7 @@ export const CartProvider = ({ children }) => {
         error,
         loading,
         totalCartCount,
+        removeFromCart,
       }}
     >
       {children}

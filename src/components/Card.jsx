@@ -1,12 +1,23 @@
-// import { useState } from "react";
 import "../styles/card.css";
 import { useCart } from "../Context/CartContext";
 export default function Card(props) {
-  const { cart, incrementToCart, decrementFromCart } = useCart();
-
+  const { cart, incrementToCart, decrementFromCart, removeFromCart } =
+    useCart();
   const retrieveCount = (menuItem) => {
     const found = cart.find((item) => item.id == menuItem.id);
     return found ? found.count : 0;
+  };
+
+  const cartBehavDisplay = () => {
+    if (!itemExist(props.menuItem)) {
+      incrementToCart(props.menuItem);
+    } else {
+      removeFromCart(props.menuItem);
+    }
+  };
+
+  const itemExist = () => {
+    return cart.find((item) => item.id == props.menuItem.id);
   };
   return (
     <div
@@ -22,7 +33,9 @@ export default function Card(props) {
             <button onClick={() => decrementFromCart(props.menuItem)}>-</button>
             <span>{retrieveCount(props.menuItem)}</span>
             <button onClick={() => incrementToCart(props.menuItem)}>+</button>
-            {/* <button onClick={incrementToCart(props.menuItem)}>Add to Cart</button> */}
+            <button onClick={() => cartBehavDisplay()}>
+              {itemExist() ? "Remove Item" : "Add to Cart"}
+            </button>
           </div>
         </div>
       </div>
