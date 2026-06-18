@@ -1,0 +1,40 @@
+.menuPreview img {
+  width: 25rem;
+  max-width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 8px;
+  place-self: center;
+}
+
+.menuPreview {
+  display: grid;
+  grid-template-columns: 25rem 40rem;
+  width: 80%;
+  margin: 0 auto;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.menuPreview .detailsContainer{
+    max-width: 30rem;
+    place-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuPreview .addToCart{
+  width: fit-content;
+  padding: 1rem 2rem;
+  border: 1px solid;
+
+}
+
+@media (max-width: 985px) {
+  .menuPreview {
+    grid-template-columns: 1fr;
+  }
+}

@@ -11,7 +11,6 @@ const HomePage = () => {
 
   return (
     <div className="homePage">
-      <h1>Homepage</h1>
       <div className="bgImg1" style={{ backgroundImage: `url(${bgImage1})` }}>
         <div className="textContent">
           <h1>Delicious Coffee</h1>
@@ -39,6 +38,7 @@ const HomePage = () => {
                     .split(" ")
                     .slice(0, 4)
                     .join(" ")}
+                    to ={`/shop/${menuItem.title.toLowerCase()}`}
                 />
               </div>
             ))}

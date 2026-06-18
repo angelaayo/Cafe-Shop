@@ -1,24 +1,29 @@
 import { Outlet } from "react-router";
 import { Link } from "react-router";
 import "./styles/App.css";
+import { useCart } from "./Context/CartContext";
 export default function App() {
+  const {totalCartCount} = useCart();
   return (
-    <div>
-      <h1>This is where we have the navigation</h1>
+    <div className="app">
       <nav>
-        <ul>
+        <ul className="outerList">
           <li>
-            <Link to="/">Cafe Nautica</Link>
+            <Link className="brandName" to="/">
+              Cafe Nautica
+            </Link>
           </li>
-          <li>
-            <Link to="shop">Shop Page</Link>
-          </li>
-          <li>
-            <Link to="cart">Cart Page</Link>
-          </li>
+          <ul className="innerList">
+            <li style={{ textDecoration: "underline" }}>
+              <Link to="shop">Shop Page</Link>
+            </li>
+            <li style={{ textDecoration: "underline" }}>
+              <Link to="cart">Cart Page {totalCartCount()}</Link>
+            </li>
+          </ul>
         </ul>
       </nav>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }

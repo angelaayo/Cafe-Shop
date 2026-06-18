@@ -60,6 +60,23 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const cartBehavDisplay = (menuItem) => {
+    if (!itemExist(menuItem)) {
+      incrementToCart(menuItem);
+    } else {
+      removeFromCart(menuItem);
+    }
+  };
+
+  const itemExist = (menuItem) => {
+    return cart.find((item) => item.id == menuItem.id);
+  };
+
+  const retrieveCount = (menuItem) => {
+    const found = cart.find((item) => item.id == menuItem.id);
+    return found ? found.count : 0;
+  };
+
   const removeFromCart = (itemToRemove) => {
     setCart(cart.filter((cartItem) => cartItem.id != itemToRemove.id));
   };
@@ -79,6 +96,9 @@ export const CartProvider = ({ children }) => {
         loading,
         totalCartCount,
         removeFromCart,
+        retrieveCount,
+        cartBehavDisplay,
+        itemExist,
       }}
     >
       {children}

@@ -1,11 +1,25 @@
-import { useCart } from "../Context/CartContext"
-
-export default function CartPage(){
-    const {totalCartCount} = useCart();
-    return(
-        <>
-        <h1>Cart view</h1>
-        <h2>{totalCartCount()}</h2>
-        </>
-    )
+import { useCart } from "../Context/CartContext";
+import CartCard from "../components/CartCard";
+export default function CartPage() {
+  const { totalCartCount, cart } = useCart();
+  return (
+    <div className="cartPage">
+      <h1>Cart view</h1>
+      <h2>{totalCartCount()}</h2>
+      <div className="cartItems">
+        {cart.length == 0 ? (
+          <h2>Cart is Empty</h2>
+        ) : (
+          <div>
+            <h2>Cart is not empty</h2>
+            {cart.map((item) => (
+                <CartCard
+                key = {item.id}
+                />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }

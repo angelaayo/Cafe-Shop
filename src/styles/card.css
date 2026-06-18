@@ -17,6 +17,12 @@
   padding: 0.4rem 0.6rem;
 
 }
+
+.infoContainer .span1{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem
+}
 .purchaseInfo{
     /* border: 1px solid red; */
     display: flex;
@@ -32,6 +38,7 @@
     height: 1.5rem;
     padding: 0rem 0.5rem;
     align-items: center;
+    width:fit-content;
 }
 
 @media(max-width: 935px){

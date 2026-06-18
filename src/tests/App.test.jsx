@@ -4,7 +4,8 @@ import { describe, expect, test, beforeEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createMemoryRouter, RouterProvider } from "react-router";
-import routes from '../routes.jsx';
+import routes from "../routes.jsx";
+import { CartProvider } from "../Context/CartProvider";
 
 // describe("App Component", () => {
 //   test("Render Magnificent Monkeys", () => {
@@ -23,8 +24,8 @@ import routes from '../routes.jsx';
 
 describe("App component renders", () => {
   test("Render Nav Links", () => {
-    const router = createMemoryRouter(routes, {initialEntries: ["/"]});
-    const container = render(<RouterProvider router={router} />)
+    const router = createMemoryRouter(routes, { initialEntries: ["/"] });
+    const container = render(<RouterProvider router={router} />);
     expect(container).toMatchSnapshot();
   });
 });
@@ -33,12 +34,16 @@ describe("Nav Links end up at the right page", () => {
   let user;
   beforeEach(() => {
     user = userEvent.setup();
-    const router = createMemoryRouter(routes, {initialEntries: ["/"]});
-    render(<RouterProvider router={router} />)
+    const router = createMemoryRouter(routes, { initialEntries: ["/"] });
+    render(
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>,
+    );
   });
   test("Render Home Page", async () => {
     await user.click(screen.getByRole("link", { name: /cafe nautica/i }));
-    expect(screen.getByText(/homepage/i)).toBeInTheDocument();
+    expect(screen.getByText(/delicious coffee/i)).toBeInTheDocument();
   });
 
   test("Render Shop Page", async () => {

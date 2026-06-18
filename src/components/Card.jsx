@@ -1,31 +1,25 @@
 import "../styles/card.css";
+import { Link } from "react-router";
 import { useCart } from "../Context/CartContext";
 export default function Card(props) {
-  const { cart, incrementToCart, decrementFromCart, removeFromCart } =
-    useCart();
-  const retrieveCount = (menuItem) => {
-    const found = cart.find((item) => item.id == menuItem.id);
-    return found ? found.count : 0;
-  };
+  const {
+    incrementToCart,
+    decrementFromCart,
+    retrieveCount,
+    itemExist,
+    cartBehavDisplay,
+  } = useCart();
 
-  const cartBehavDisplay = () => {
-    if (!itemExist(props.menuItem)) {
-      incrementToCart(props.menuItem);
-    } else {
-      removeFromCart(props.menuItem);
-    }
-  };
-
-  const itemExist = () => {
-    return cart.find((item) => item.id == props.menuItem.id);
-  };
   return (
     <div
       className="image"
       style={{ backgroundImage: `url(${props.menuItem.image})` }}
     >
       <div className="infoContainer">
-        <h4>{props.menuItem.title}</h4>
+        <div className="span1">
+          <h4>{props.menuItem.title}</h4>
+          <Link to={props.to}> ⮞</Link>
+        </div>
         <h5>{props.description}</h5>
         <div className="purchaseInfo">
           <h5>$5 Price</h5>
@@ -33,8 +27,8 @@ export default function Card(props) {
             <button onClick={() => decrementFromCart(props.menuItem)}>-</button>
             <span>{retrieveCount(props.menuItem)}</span>
             <button onClick={() => incrementToCart(props.menuItem)}>+</button>
-            <button onClick={() => cartBehavDisplay()}>
-              {itemExist() ? "Remove Item" : "Add to Cart"}
+            <button onClick={() => cartBehavDisplay(props.menuItem)}>
+              {itemExist(props.menuItem) ? "Remove Item" : "Add to Cart"}
             </button>
           </div>
         </div>

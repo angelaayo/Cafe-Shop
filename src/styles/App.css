@@ -2,3 +2,20 @@ body{
     /* background-color: #F7F2E8; */
     /* border: 1px solid rgb(68, 187, 151); */
 }
+
+.app .brandName{
+    font-family: "Oregano", cursive;
+    font-size: 3em;
+}
+
+.app .outerList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.app .innerList{
+    display: flex;
+    gap: 2rem;
+}
