@@ -1,7 +1,8 @@
-export default function CartCard(){
+export default function CartCard(props){
     return(
         <div>
-            <h1>Hello world im a cart card</h1>
+            <h2>{props.cartItem.title}</h2>
+            <h2>{props.cartItem.count}</h2>
         </div>
     )
 }

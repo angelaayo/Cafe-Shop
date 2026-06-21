@@ -4,6 +4,7 @@ export default function CartPage() {
   const { totalCartCount, cart } = useCart();
   return (
     <div className="cartPage">
+      {console.log(cart)}
       <h1>Cart view</h1>
       <h2>{totalCartCount()}</h2>
       <div className="cartItems">
@@ -13,9 +14,7 @@ export default function CartPage() {
           <div>
             <h2>Cart is not empty</h2>
             {cart.map((item) => (
-                <CartCard
-                key = {item.id}
-                />
+              <CartCard key={item.id} cartItem={item} />
             ))}
           </div>
         )}
