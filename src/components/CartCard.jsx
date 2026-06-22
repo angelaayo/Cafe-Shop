@@ -1,8 +1,49 @@
-export default function CartCard(props){
-    return(
-        <div>
-            <h2>{props.cartItem.title}</h2>
-            <h2>{props.cartItem.count}</h2>
+import "../styles/CartView.css";
+import { Link } from "react-router";
+import { useCart } from "../Context/CartContext";
+export default function CartCard(props) {
+  const { incrementToCart, decrementFromCart, removeFromCart } = useCart();
+  return (
+    <div className="cartCard">
+      <Link to={`/shop/${props.cartItem.title.toLowerCase()}`}>
+        <img src={props.cartItem.image}></img>
+      </Link>
+      <div className="cartInfo">
+        <div className="header">
+          <h2>{props.cartItem.title}</h2>
+          <h4>Quantity: {props.cartItem.count}</h4>
         </div>
-    )
+        <h3>{props.cartItem.description.split(" ").slice(0, 9).join(" ")}</h3>
+
+        <h3>Price: ${props.cartItem.price}</h3>
+        <h3>Ingredients: </h3>
+        <ul className="ingredients">
+          {props.cartItem.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+        <div className="buttons">
+          <div className="buttons1">
+            <button
+              className="bt1"
+              onClick={() => incrementToCart(props.cartItem)}
+            >
+              +
+            </button>
+            <button
+              className="bt1"
+              onClick={() => decrementFromCart(props.cartItem)}
+            >
+              -
+            </button>
+          </div>
+          <div>
+            <button onClick={() => removeFromCart(props.cartItem)}>
+              remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

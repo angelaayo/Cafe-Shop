@@ -3,11 +3,10 @@ import Card from "../components/Card";
 import bgImage1 from "../assets/bgImage1.jpg";
 import bgImage2 from "../assets/bgImage2.jpg";
 import { Link } from "react-router";
-import { useCart } from "../Context/CartContext";
+import data from "../data.json";
 
 const HomePage = () => {
-  const { inventory, loading } = useCart();
-  const top3 = [inventory[0], inventory[1], inventory[2]];
+  const top3 = [data[0], data[1], data[2]];
 
   return (
     <div className="homePage">
@@ -26,24 +25,20 @@ const HomePage = () => {
         <h5>Taste you've never imagined</h5>
       </div>
       <div className="popularContainer">
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <>
-            {top3.map((menuItem) => (
-              <div className="popCard" key={menuItem.id}>
-                <Card
-                  menuItem={menuItem}
-                  description={menuItem.description
-                    .split(" ")
-                    .slice(0, 4)
-                    .join(" ")}
-                    to ={`/shop/${menuItem.title.toLowerCase()}`}
-                />
-              </div>
-            ))}
-          </>
-        )}
+        <>
+          {top3.map((menuItem) => (
+            <div className="popCard" key={menuItem.id}>
+              <Card
+                menuItem={menuItem}
+                description={menuItem.description
+                  .split(" ")
+                  .slice(0, 4)
+                  .join(" ")}
+                to={`/shop/${menuItem.title.toLowerCase()}`}
+              />
+            </div>
+          ))}
+        </>
       </div>
       <div
         className="bgImg2"

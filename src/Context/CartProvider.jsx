@@ -1,30 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { CartContext } from "./CartContext.jsx";
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [inventory, setInventory] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const response = await fetch("https://api.sampleapis.com/coffee/hot");
-        if (response.status >= 400) {
-          throw new Error("server error");
-        }
-        const data = await response.json();
-        setInventory(data);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getData();
-  }, []);
 
   const incrementToCart = (itemToAdd) => {
     const itemExist = cart.find((item) => item.id == itemToAdd.id);
@@ -44,7 +22,7 @@ export const CartProvider = ({ children }) => {
   const decrementFromCart = (itemToRemove) => {
     const itemExist = cart.find((item) => item.id == itemToRemove.id);
     if (itemExist) {
-      if (itemExist.count >= 2) {
+      if (itemExist.count > 1) {
         setCart(
           cart.map((cartItem) =>
             cartItem.id == itemToRemove.id
@@ -89,11 +67,8 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
-        inventory,
         incrementToCart,
         decrementFromCart,
-        error,
-        loading,
         totalCartCount,
         removeFromCart,
         retrieveCount,

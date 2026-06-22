@@ -22,7 +22,7 @@ export default function Card(props) {
         </div>
         <h5>{props.description}</h5>
         <div className="purchaseInfo">
-          <h5>$5 Price</h5>
+          <h5>${props.menuItem.price}</h5>
           <div className="buttonContainer">
             <button onClick={() => decrementFromCart(props.menuItem)}>-</button>
             <span>{retrieveCount(props.menuItem)}</span>
