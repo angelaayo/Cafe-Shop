@@ -11,7 +11,7 @@ export default function CartCard(props) {
       <div className="cartInfo">
         <div className="header">
           <h2>{props.cartItem.title}</h2>
-          <h4>Quantity: {props.cartItem.count}</h4>
+          <h3>Quantity: {props.cartItem.count}</h3>
         </div>
         <h3>{props.cartItem.description.split(" ").slice(0, 9).join(" ")}</h3>
 
