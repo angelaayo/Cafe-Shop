@@ -1,27 +1,11 @@
 .shopContainer {
-  /* border: 1px solid red; */
+  border: 3px solid yellow;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
-.cardContainer-shop {
-  width: 17rem;
-  height: 17.5rem;
-}
-
-@media (max-width: 1320px) {
-  .shopContainer {
-    width: 90%;
-  }
-}
-
-@media (max-width: 450px) {
-  .cardContainer-shop {
-    border: 1px solid pink;
-    height: 16rem;
-  }
-}

@@ -1,10 +1,11 @@
 .image {
   /* border: 1px solid green; */
-  height: 100%;
-  width: 100%;
+  flex: 1 1 17rem;
+  min-width: 0;
+  aspect-ratio: 1;
   background-size: cover;
   background-position: 50% 80%;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   display: flex;
   align-items: flex-end;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.09);

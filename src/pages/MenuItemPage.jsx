@@ -4,7 +4,6 @@ import MenuPreview from "../components/MenuPreview";
 import data from '../data.json';
 export default function MenuItemPage() {
   const { id } = useParams();
-  console.log(id);
 
   const itemExist = data.find((item) => item.title.toLowerCase() == id);
   if (!itemExist) {

@@ -6,7 +6,6 @@ import data from "../data.json";
 export default function ShopPage() {
   return (
     <>
-      <h1>Catalog</h1>
       <div className="shopContainer">
         {data.map((menuItem) => (
           <div
