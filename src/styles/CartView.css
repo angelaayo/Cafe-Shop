@@ -1,5 +1,7 @@
 .cartView {
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0 3rem;
 }
 
@@ -28,7 +30,7 @@
   aspect-ratio: 1;
   width: clamp(8rem, 18vw, 12rem);
   border-radius: 1rem;
-  flex-shrink: 0;
+  object-fit: cover;
 }
 .header {
   display: flex;

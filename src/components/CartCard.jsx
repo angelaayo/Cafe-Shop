@@ -5,7 +5,7 @@ export default function CartCard(props) {
   const { incrementToCart, decrementFromCart, removeFromCart } = useCart();
   return (
     <div className="cartCard">
-      <Link to={`/shop/${props.cartItem.title.toLowerCase()}`}>
+      <Link to={`/shop/${props.cartItem.title.toLowerCase()}`} className="link">
         <img src={props.cartItem.image}></img>
       </Link>
       <div className="cartInfo">
