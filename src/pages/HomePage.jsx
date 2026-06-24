@@ -3,6 +3,8 @@ import Card from "../components/Card";
 import bgImage1 from "../assets/bgImage1.jpg";
 import bgImage2 from "../assets/bgImage2.jpg";
 import { Link } from "react-router";
+import { Icon } from "@mdi/react";
+import { mdiCoffee } from "@mdi/js";
 import data from "../data.json";
 
 const HomePage = () => {
@@ -17,12 +19,14 @@ const HomePage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </h5>
-          <Link to="shop">Shop</Link>
         </div>
       </div>
       <div className="midHeader">
-        <h2>Drink a coffee</h2>
+        <h2>Drink a coffee <Icon path={mdiCoffee} size={1} /></h2>
         <h5>Taste you've never imagined</h5>
+        <Link to="shop">
+          <h2 style={{textDecoration: "underline dotted"}}>Shop</h2>
+        </Link>
       </div>
       <div className="popularContainer">
         <>

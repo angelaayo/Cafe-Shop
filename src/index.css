@@ -26,10 +26,29 @@ h2 {
   font-weight: normal;
 }
 
-h5, h4, h3, h2{
-  font-size: 1em;
+h1{
+  font-family: "Gaegu", sans-serif;
+  font-size: 3rem;
 }
 
+h2 {
+  font-family: "Emilys Candy", serif;
+  font-size: 1.5rem;
+}
+h3 {
+  font-family: "Dekko", cursive;
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-family: "Emilys Candy", serif;
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-family: "Dekko", cursive;
+  font-size: 1rem;
+}
 
 a {
   text-decoration: none;
@@ -41,4 +60,25 @@ a {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+@media (max-width: 45rem) {
+  html {
+    /* border: 1px solid pink; */
+    font-size: 1.5vh;
+  }
+}
+
+@media (max-width: 20rem) {
+  html {
+    border: 1px solid yellow;
+    font-size: 1.1vh;
+  }
+}
+
+@media (max-width: 15rem) {
+  html {
+    border: 1px solid yellow;
+    font-size: 0.7vh;
+  }
 }

@@ -40,6 +40,11 @@
     width:fit-content;
 }
 
+.buttonContainer, .infoContainer button{
+  font-family: "Gaegu", sans-serif;
+  font-size: 1.1rem;
+}
+
 @media(max-width: 935px){
   .cardContainer{
     background-position: 50% 60%;

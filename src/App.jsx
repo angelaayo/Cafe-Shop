@@ -1,9 +1,12 @@
-import { Outlet } from "react-router";
-import { Link } from "react-router";
+import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./styles/App.css";
 import { useCart } from "./Context/CartContext";
+import { Icon } from "@mdi/react";
+import { mdiCartOutline, mdiBasketOutline } from "@mdi/js";
+
 export default function App() {
-  const {totalCartCount} = useCart();
+  const { totalCartCount } = useCart();
   return (
     <div className="app">
       <nav>
@@ -14,11 +17,17 @@ export default function App() {
             </Link>
           </li>
           <ul className="innerList">
-            <li style={{ textDecoration: "underline" }}>
-              <Link to="shop">Shop Page</Link>
+            <li>
+              <Link to="shop">
+                <Icon path={mdiBasketOutline} size={1} />
+                Shop
+              </Link>
             </li>
-            <li style={{ textDecoration: "underline" }}>
-              <Link to="cart">Cart Page {totalCartCount()}</Link>
+            <li>
+              <Link to="cart">
+                <Icon path={mdiCartOutline} size={1} />
+                <span>{totalCartCount()}</span>
+              </Link>
             </li>
           </ul>
         </ul>

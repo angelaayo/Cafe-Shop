@@ -25,7 +25,7 @@ export default function CartTotal() {
           </div>
         ))}
       </div>
-      <div>total: {findTotal().toFixed(2)}</div>
+      <h4>Total: {findTotal().toFixed(2)}</h4>
     </div>
   );
 }

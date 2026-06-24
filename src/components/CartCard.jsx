@@ -1,6 +1,8 @@
 import "../styles/CartView.css";
 import { Link } from "react-router";
 import { useCart } from "../Context/CartContext";
+import {Icon} from '@mdi/react';
+import { mdiBasketRemoveOutline } from '@mdi/js';
 export default function CartCard(props) {
   const { incrementToCart, decrementFromCart, removeFromCart } = useCart();
   return (
@@ -19,7 +21,7 @@ export default function CartCard(props) {
         <h3>Ingredients: </h3>
         <ul className="ingredients">
           {props.cartItem.ingredients.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
+            <li key={index}><h5>{ingredient}</h5></li>
           ))}
         </ul>
         <div className="buttons">
@@ -39,7 +41,7 @@ export default function CartCard(props) {
           </div>
           <div>
             <button onClick={() => removeFromCart(props.cartItem)}>
-              remove
+              <Icon path={mdiBasketRemoveOutline} size={1.5} />
             </button>
           </div>
         </div>
