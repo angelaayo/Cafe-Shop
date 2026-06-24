@@ -8,7 +8,7 @@ export default function MenuPreview(props) {
       <div className="detailsContainer">
         <h3>{props.menuItem.title}</h3>
         <h5>{props.menuItem.description}</h5>
-        <h4>Price: $5</h4>
+        <h4>${props.menuItem.price}</h4>
         <div className="buttonContainer">
           <button onClick={() => decrementFromCart(props.menuItem)}>-</button>
           <span>{retrieveCount(props.menuItem)}</span>
